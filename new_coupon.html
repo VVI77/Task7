@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/" />
+<title>new_coupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">new_coupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/open-eshop-2.0.1/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=eShop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Coupons</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.page-header &gt; h1</td>
+	<td>Coupon</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>VI_coupon_0003</td>
+	<td>coupon</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div#content a.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=name</td>
+	<td>${coupon}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*20)</td>
+	<td>discount</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=discount_amount</td>
+	<td>${discount}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=valid_date</td>
+	<td>2014-05-05</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.round(Math.random()*100)</td>
+	<td>nc</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=number_coupons</td>
+	<td>${nc}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=form.form button.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.table-responsive td</td>
+	<td>${coupon}</td>
+</tr>
+</tbody></table>
+</body>
+</html>
